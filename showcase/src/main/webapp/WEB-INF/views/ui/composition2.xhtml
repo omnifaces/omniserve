@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>ui:composition showcase #2</title>
+    </head>
+    <body>
+        <h2>ui:composition showcase #2</h2>
+        <ui:composition template="/ui/composition2_template.xhtml">
+            <ui:define name="left">
+                left
+            </ui:define>
+            <ui:define name="right">
+                right
+            </ui:define>
+            <ui:define name="content">
+                <h:form id="form">
+                    <h:inputText id="inputText" value="#{form1Bean.text}"/>
+                    <h:commandButton id="commandButton" action="#{form1Bean.doIt}" value="Submit"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

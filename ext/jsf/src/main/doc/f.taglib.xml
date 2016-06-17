@@ -1,0 +1,274 @@
+<facelet-taglib
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd"
+    version="2.2">
+    <namespace>http://xmlns.jcp.org/jsf/core</namespace>
+    <short-name>f</short-name>
+    <description>
+        &lt;p&gt;
+        This is the JSF compatibility library that will make migrating from
+        JSF to OmniServe a lot easier. Note that some tags are NOT supported in 
+        OmniServe please see the documentation of each tag for more details.
+        &lt;/p&gt;
+        &lt;p&gt;
+        Note you can also use the "http://java.sun.com/jsf/core" namespace.
+    </description>
+    <tag>
+        <tag-name>attribute</tag-name>
+        <description>
+            This tag makes it possible to set an attribute on its component parent.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the attribute.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the attribute.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>attributes</tag-name>
+        <description>
+            This tag makes it possible to set a map of attributes on its component parent.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.util.Map</type>
+            <description>
+                The map of (name, value expression/object) pairs to set on its component parent.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>convertDateTime</tag-name>
+        <description>
+            This tag that sets the DateTimeConverter to its component parent.
+        </description>
+        <attribute>
+            <name>pattern</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The format the given date/time string needs to adhere to for parsing or formatting.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>converter</tag-name>
+        <description>
+            This tag sets the converter to the converter named in the converterId.
+        </description>
+        <attribute>
+            <name>converterId</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The identifier of the converter to create.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>param</tag-name>
+        <description>
+            This tag makes it possible to pass a parameter to its component parent.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the parameter.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the parameter.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>passThroughAttribute</tag-name>
+        <description>
+            This tag makes it possible to set a pass-through attribute on its component parent.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the attribute.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the attribute.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>passThroughAttributes</tag-name>
+        <description>
+            This tag makes it possible to set a map of pass-through attributes on its component parent.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.util.Map</type>
+            <description>
+                The map of (name, value expression/object) pairs to set on its component parent.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>setPropertyActionLsitener</tag-name>
+        <description>
+            This tag makes it possible to register an action listener that will
+            set the target property to the value specified by the value expression.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value expression for the value.
+            </description>
+        </attribute>
+        <attribute>
+            <name>target</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value expression for the target property.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>validateDoubleRange</tag-name>
+        <description>
+            This tag makes it possible to specify a minimum and maximum value
+            the input value needs to be in between (inclusive).
+        </description>
+        <attribute>
+            <name>maximum</name>
+            <required>false</required>
+            <type>java.lang.Double</type>
+            <description>
+                The maximum value.
+            </description>
+        </attribute>
+        <attribute>
+            <name>minimum</name>
+            <required>false</required>
+            <type>java.lang.Double</type>
+            <description>
+                The minimum value.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>validateLength</tag-name>
+        <description>
+            This tag makes it possible to specify a minimum and maximum length
+            the input string needs to be in between (inclusive).
+        </description>
+        <attribute>
+            <name>maximum</name>
+            <required>false</required>
+            <type>java.lang.Integer</type>
+            <description>
+                The maximum length.
+            </description>
+        </attribute>
+        <attribute>
+            <name>minimum</name>
+            <required>false</required>
+            <type>java.lang.Integer</type>
+            <description>
+                The minimum length.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>validateLongRange</tag-name>
+        <description>
+            This tag makes it possible to specify a minimum and maximum value
+            the input value needs to be in between (inclusive).
+        </description>
+        <attribute>
+            <name>maximum</name>
+            <required>false</required>
+            <type>java.lang.Long</type>
+            <description>
+                The maximum value.
+            </description>
+        </attribute>
+        <attribute>
+            <name>minimum</name>
+            <required>false</required>
+            <type>java.lang.Long</type>
+            <description>
+                The minimum value.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>validateRegex</tag-name>
+        <description>
+            This tag makes it possible to specify a regular expression pattern
+            the input string needs to conform to.
+        </description>
+        <attribute>
+            <name>pattern</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The regular expression.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>validateRequired</tag-name>
+        <description>
+            This tag makes it possible to specify the "required" validator
+            for its editable value holder parent.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>validator</tag-name>
+        <description>
+            This tag makes it possible to specify a specific validator for an
+            editable value holder.
+        </description>
+        <attribute>
+            <name>validatorId</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the registered validator.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>view</tag-name>
+        <description>
+            This tag influences how the view is rendered.
+        </description>
+    </tag>
+</facelet-taglib>

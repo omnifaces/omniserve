@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
+    <body>
+        <menu name="Overview">
+            <item name="About" href="index.html"/>
+            <item name="License" href="license.html"/>
+        </menu>
+        <menu name="Users">
+            <item name="JavaDocs" href="apidocs/index.html"/>
+            <item name="VDLDocs" href="vdldocs/index.html"/>
+        </menu>
+        <menu name="Contributors">
+            <item name="CPD" href="cpd.html"/>
+            <item name="FindBugs" href="findbugs.html"/>
+        </menu>
+    </body>
+</project>

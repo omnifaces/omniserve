@@ -1,0 +1,26 @@
+<facelet-taglib
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd"
+    version="2.2">
+    <namespace>http://www.omnifaces.org/serve/ext/cc</namespace>
+    <short-name>cc</short-name>
+    <description>
+        The cc library delivers the functionality to define components using a
+        page syntax and use them.
+    </description>
+    <tag>
+        <tag-name>interface</tag-name>
+        <description>
+            This tag and its children defines the interface of the re-usable
+            component (aka the parameters).
+        </description>
+    </tag>
+    <tag>
+        <tag-name>implementation</tag-name>
+        <description>
+            This tag and its children defines the structure of the re-usable
+            component (aka the implementation).
+        </description>
+    </tag>
+</facelet-taglib>

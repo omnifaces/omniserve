@@ -1,0 +1,515 @@
+<facelet-taglib
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd"
+    version="2.2">
+    <namespace>http://xmlns.jcp.org/jsf/html</namespace>
+    <short-name>h</short-name>
+    <description>
+        The h library delivers a core set of HTML components.
+    </description>
+    <tag>
+        <tag-name>body</tag-name>
+        <description>
+            This tag delivers a convenience wrapper around the regular HTML body element.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the body.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>button</tag-name>
+        <description>
+            This tag delivers a non-POST HTML button.
+        </description>
+        <attribute>
+            <name>outcome</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The outcome.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The text of the button.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>column</tag-name>
+        <description>
+            This tag delivers the way to define a column in a h:dataTable.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>commandButton</tag-name>
+        <description>
+            This tag delivers a button that executes actions.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the command button.
+            </description>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The action of the command button.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The text of the command button.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>commandLink</tag-name>
+        <description>
+            This tag delivers a link that executes actions.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the command link.
+            </description>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The action of the command link.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The text of the command link.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>dataTable</tag-name>
+        <description>
+            This tag gives you a way to render a component sub-tree on the
+            basis of a collection in a table manner.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The collection that the h:dataTable iterates over.
+            </description>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the variable that can be used inside the context of
+                this h:dataTable.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>doctype</tag-name>
+        <description>
+            This tag delivers a componentized way to render a doctype
+        </description>
+        <attribute>
+            <name>public</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The public for the doctype.
+            </description>
+        </attribute>
+        <attribute>
+            <name>system</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The system for the doctype.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>form</tag-name>
+        <description>
+            This tag delivers a form.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the form.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>graphicImage</tag-name>
+        <description>
+            This tag delivers a componentized way to render an image.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The source of the image.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>head</tag-name>
+        <description>
+            This tag delivers a convenience wrapper around the regular HTML head element.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>inputCheckbox</tag-name>
+        <description>
+            This tag delivers a componentized version of a checkbox input.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the checkbox
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>boolean</type>
+            <description>
+                The value of the checkbox.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>inputFile</tag-name>
+        <description>
+            This tag makes it possible to submit a file.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the file field.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>javax.servlet.http.Part</type>
+            <description>
+                The value of the file field.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>inputHidden</tag-name>
+        <description>
+            This tag makes it possible to submit a hidden field.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the hidden field.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the hidden field.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>inputSecret</tag-name>
+        <description>
+            This tag makes it possible to enter a value in a secret text input field.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the secret text input field.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the secret text input field.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>inputText</tag-name>
+        <description>
+            This tag makes it possible to enter a value in a text input field.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the text input field.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the text input field.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>inputTextarea</tag-name>
+        <description>
+            This tag makes it possible to enter a value in a textarea.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the textarea.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the textarea.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>link</tag-name>
+        <description>
+            This tag delivers a componentized way of generating an link.
+        </description>
+        <attribute>
+            <name>outcome</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The outcome (aka the href of the link).
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The body of the link.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>message</tag-name>
+        <description>
+            This tag makes it possible to display a message.
+        </description>
+        <attribute>
+            <name>for</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The id of the component we are displaying the message for.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>messages</tag-name>
+        <description>
+            This tag makes it possible to display all active messages.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>outputFormat</tag-name>
+        <description>
+            This tag delivers a componentized way of outputting formatted text,
+            by using nested f:param tags as arguments to MessageFormat, with
+            the value attribute as the template text.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The template text.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>outputLabel</tag-name>
+        <description>
+            This tag outputs a HTML label.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The label to output.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>outputLink</tag-name>
+        <description>
+            This tag delivers a componentized way of generating an output link.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The value (aka the href of the link).
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>outputScript</tag-name>
+        <description>
+            This tag delivers a componentized way of generating a script block.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name (aka the src of the script block).
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>outputStylesheet</tag-name>
+        <description>
+            This tag delivers a componentized way of generating stylesheet link.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name (aka the href of the stylesheet).
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>outputText</tag-name>
+        <description>
+            This tag outputs text.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value to output.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>panelGrid</tag-name>
+        <description>
+            This tag layouts it non-text children in a grid.
+        </description>
+        <attribute>
+            <name>columns</name>
+            <required>true</required>
+            <type>int</type>
+            <description>
+                The number of columns.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>panelGroup</tag-name>
+        <description>
+            This tag delivers a "span" or "div" element with children inside
+            of it.
+        </description>
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                The id of the component.
+            </description>
+        </attribute>
+        <attribute>
+            <name>layout</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                When the value of the attribute is "block" render a "div",
+                otherwise render a "span".
+            </description>
+        </attribute>
+        <attribute>
+            <name>rendered</name>
+            <required>false</required>
+            <type>boolean</type>
+            <description>
+                Flag to indicate whether or not we are rendering this component.
+            </description>
+        </attribute>
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                CSS style(s) to render.
+            </description>
+        </attribute>
+        <attribute>
+            <name>styleClass</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+            <description>
+                Space separated list of CSS style class(es) to render.
+            </description>
+        </attribute>
+    </tag>
+</facelet-taglib>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.omnifaces.omniserve</groupId>
+        <artifactId>pom</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    
+    <groupId>org.omnifaces.omniserve.ext</groupId>
+    <artifactId>pom</artifactId>
+    <packaging>pom</packaging>
+    
+    <name>Extensions</name>
+    
+    <description>
+        The extensions that expand the capabilities of OmniServe.
+    </description>
+    
+    <modules>
+        <module>ajax</module>
+        <module>c</module>
+        <module>chartjs</module>
+        <module>composite</module>
+        <module>converter</module>
+        <module>extensionless</module>
+        <module>functions</module>
+        <module>jsf</module>
+        <module>json</module>
+        <module>passthrough</module>
+        <module>processor</module>
+        <module>processorcache</module>
+        <module>react</module>
+        <module>renderercache</module>
+        <module>ui</module>
+        <module>validator</module>
+        <module>viewcache</module>
+        <module>zxing</module>
+    </modules>
+</project>

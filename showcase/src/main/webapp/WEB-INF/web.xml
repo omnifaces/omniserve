@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>OmniServe Filter</filter-name>
+        <filter-class>org.omnifaces.serve.ServeFilter</filter-class>
+        <init-param>
+            <param-name>org.omnifaces.serve.LifecycleId</param-name>
+            <param-value>PHASE</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>OmniServe Filter</filter-name>
+        <url-pattern>*.filter</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>OmniServe</servlet-name>
+        <servlet-class>org.omnifaces.serve.ServeServlet</servlet-class>
+        <init-param>
+            <param-name>org.omnifaces.serve.LifecycleId</param-name>
+            <param-value>PHASE</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>OmniServe Exact</servlet-name>
+        <servlet-class>org.omnifaces.serve.ServeServlet</servlet-class>
+        <init-param>
+            <param-name>org.omnifaces.serve.LifecycleId</param-name>
+            <param-value>PHASE</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>OmniServe Prefix</servlet-name>
+        <servlet-class>org.omnifaces.serve.ServeServlet</servlet-class>
+        <init-param>
+            <param-name>org.omnifaces.serve.LifecycleId</param-name>
+            <param-value>PHASE</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>OmniServe REST</servlet-name>
+        <servlet-class>org.omnifaces.serve.ServeServlet</servlet-class>
+        <init-param>
+            <param-name>org.omnifaces.serve.LifecycleId</param-name>
+            <param-value>REST</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OmniServe</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OmniServe Exact</servlet-name>
+        <url-pattern>/c/choose1.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OmniServe Prefix</servlet-name>
+        <url-pattern>/prefix/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OmniServe REST</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+</web-app>

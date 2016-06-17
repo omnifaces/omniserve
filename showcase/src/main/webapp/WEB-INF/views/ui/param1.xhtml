@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>ui:param showcase #1</title>
+    </head>
+    <body>
+        <h2>ui:param showcase #1</h2>
+        <ui:include src="/ui/param1_included.xhtml">
+            <ui:param name="passedParameter" value="This was passed into the included file"/>
+        </ui:include>
+        <p>
+            <a href="../index.xhtml">Back to main page</a>
+        </p>
+    </body>
+</html>

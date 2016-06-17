@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faqs xmlns="http://maven.apache.org/FML/1.0.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
+  title="Frequently Asked Questions"
+  toplink="false">
+  <part id="general">
+    <title>General</title>
+    <faq id="1">
+      <question>
+        What is OmniServe
+      </question>
+      <answer>
+        <p>OmniServe is a web framework that is plugable and extensible.</p>
+      </answer>
+    </faq>
+    <faq id="2">
+      <question>
+        What is OmniServe NOT?
+      </question>
+      <answer>
+        <p>
+          OmniService is not a templating engine.
+        </p>
+      </answer>
+    </faq>
+    <faq id="3">
+      <question>
+        How do I contribute?
+      </question>
+      <answer>
+        <p>
+        Contributing is very easy, go to GitHub and issue a merge request.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>f:validateDoubleRange showcase #1</title>
+    </head>
+    <body>
+        <h2>f:validateDoubleRange showcase #1</h2>
+        <h:form id="form">
+            <h:inputText id="inputText" value="#{validateDoubleRange1Bean.value}">
+                <f:converter converterId="org.omnifaces.serve.ext.converter.DoubleConverter"/>
+                <f:validateDoubleRange minimum="1.0" maximum="2.0"/>
+            </h:inputText>
+            <h:commandButton id="commandButton" action="#{validateDoubleRange1Bean.doIt}" value="Submit"/>
+            <h:messages id="messages"/>
+        </h:form>
+        <p>
+            <a href="../index.xhtml">Back to main page</a>
+        </p>
+    </body>
+</html>

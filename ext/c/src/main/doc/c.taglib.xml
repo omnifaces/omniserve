@@ -1,0 +1,89 @@
+<facelet-taglib
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd"
+    version="2.2">
+    <namespace>http://www.omnifaces.org/serve/ext/c</namespace>
+    <short-name>c</short-name>
+    <description>
+        The c library delivers functionality similar to the JSTL core libray.
+    </description>
+    <tag>
+        <tag-name>choose</tag-name>
+        <description>
+            This tag delivers a way to select which sub tree to include. It
+            expects nested when and/or otherwise tags.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>forEach</tag-name>
+        <description>
+            This tag gives you a way to repeat its component sub-tree on the
+            basis of a collection. &lt;i&gt;Note: as this adds actual components
+            to the component tree and the number of components can change
+            between postbacks special care should be taken when you using this
+            tag and component tree caching.&lt;/i&gt;
+        </description>
+        <attribute>
+            <name>begin</name>
+            <required>true</required>
+            <type>int</type>
+            <description>
+                The begin index to start the actual iteration.
+            </description>
+        </attribute>
+        <attribute>
+            <name>end</name>
+            <required>true</required>
+            <type>int</type>
+            <description>
+                The inclusive end index to end the actual iteration.
+            </description>
+        </attribute>
+        <attribute>
+            <name>items</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The collection that the c:forEach iterates over.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>if</tag-name>
+        <description>
+            This tag delivers a way to render conditional content.
+        </description>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <type>boolean</type>
+            <description>
+                The test condition determines whether or not to include the
+                sub tree.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>otherwise</tag-name>
+        <description>
+            This tag delivers the otherwise part of a choose, which will be
+            selected if no when part matches.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>when</tag-name>
+        <description>
+            This tag delivers the when part of a choose.
+        </description>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <type>boolean</type>
+            <description>
+                The test condition determines whether or not to include this
+                sub tree.
+            </description>
+        </attribute>
+    </tag>
+</facelet-taglib>

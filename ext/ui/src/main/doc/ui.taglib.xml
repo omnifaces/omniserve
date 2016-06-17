@@ -1,0 +1,127 @@
+<facelet-taglib
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd"
+    version="2.2">
+    <namespace>http://www.omnifaces.org/serve/ext/ui</namespace>
+    <short-name>ui</short-name>
+    <description>
+        The ui library delivers a core set of components that are rendering
+        agnostic. They can be used as building blocks for more complex user
+        interfaces.
+    </description>
+    <tag>
+        <tag-name>composition</tag-name>
+        <description>
+            This tag makes it possible to compose a page using a template and
+            insertion points.
+        </description>
+        <attribute>
+            <name>template</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The location of the template page.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>define</tag-name>
+        <description>
+            This tag delivers the component sub-tree for the insertion point
+            specified.
+        </description>
+        <attribute>
+            <name>name></name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the insertion point that we need to insert our
+                component sub-tree into.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>include</tag-name>
+        <description>
+            This tag makes it possible to include a component tree from another
+            page.
+        </description>
+        <attribute>
+            <name>src</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The source location for the included page.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>insert</tag-name>
+        <description>
+            This tag defines an insertion point (and default component
+            sub-tree).
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the insertion point.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>param</tag-name>
+        <description>
+            This tag can be used to pass in parameters to a ui:include.
+        </description>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the parameter.
+            </description>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The value of the parameter.
+            </description>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>remove</tag-name>
+        <description>
+            This tag can be used if you do not want the sub content to end
+            up in the component tree.
+        </description>
+    </tag>
+    <tag>
+        <tag-name>repeat</tag-name>
+        <description>
+            This tag gives you a way to repeat its component sub-tree on the
+            basis of a collection.
+        </description>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.Object</type>
+            <description>
+                The collection that the ui:repeat iterates over.
+            </description>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>
+                The name of the variable that can be used inside the context of
+                this ui:repeat.
+            </description>
+        </attribute>
+    </tag>
+</facelet-taglib>
